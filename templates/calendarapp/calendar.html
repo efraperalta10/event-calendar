@@ -1,6 +1,6 @@
 {% extends 'base/base.html' %}
 {% load static %}
-{% block title %}Event Calendar{% endblock title %}
+{% block title %} Calendario {% endblock title %}
 
 {% block extracss %}
   <link href="{% static 'calender/main.css' %}" rel="stylesheet" />
@@ -8,13 +8,13 @@
 
 {% block breadcrumb %}
   <div>
-      <h1><i class="fa fa-calendar"></i> Calendar</h1>
-      <p>Event Calendar</p>
+      <h1><i class="fa fa-calendar"></i> Calendario </h1>
+      {% comment %} <p>Event Calendar</p> {% endcomment %}
   </div>
-  <ul class="app-breadcrumb breadcrumb">
+  {% comment %} <ul class="app-breadcrumb breadcrumb">
       <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
       <li class="breadcrumb-item"><a href="#">Calendar</a></li>
-  </ul>
+  </ul> {% endcomment %}
 {% endblock breadcrumb %}
 
 {% block content %}
