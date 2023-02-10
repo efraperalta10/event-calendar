@@ -23,12 +23,12 @@
         <div class="tile row">
             <div class="col-md-3">
                 <div id="external-events">
-                    <h4 class="mb-4">Running Events</h4>
+                    <h4 class="mb-4">Eventos en progreso</h4>
                     {% for event in events_month %}
                       <div class="fc-event">
                           <h3>{{ event.title }}</h3>
-                          <p>From: {{ event.start_time }}</p>
-                          <p>To: {{ event.end_time }}</p>
+                          <p>De: {{ event.start_time }}</p>
+                          <p>Hasta: {{ event.end_time }}</p>
                       </div>
                     {% empty %}
                       <p>No Running Events Found</p>
@@ -43,7 +43,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header bg-primary">
-                            <h5 class="modal-title text-white" id="exampleModalLongTitle">Add New Event</h5>
+                            <h5 class="modal-title text-white" id="exampleModalLongTitle">Añadir nuevo evento</h5>
                             <button id="modalClose1" type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -52,25 +52,25 @@
                             {% csrf_token %}
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="recipient-name" class="col-form-label">Event Title:</label>
+                                    <label for="recipient-name" class="col-form-label">Titulo del evento:</label>
                                     {{ form.title }}
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Description:</label>
+                                    <label for="message-text" class="col-form-label">Descripción:</label>
                                     {{ form.description }}
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">Start Date:</label>
+                                    <label for="message-text" class="col-form-label">Fecha de Inicio:</label>
                                     {{ form.start_time }}
                                 </div>
                                 <div class="form-group">
-                                    <label for="message-text" class="col-form-label">End Date:</label>
+                                    <label for="message-text" class="col-form-label">Fecha de terminación:</label>
                                     {{ form.end_time }}
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button id="modalClose2" type="button" class="btn btn-danger">Close</button>
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button id="modalClose2" type="button" class="btn btn-danger">Cerrar</button>
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </form>
                     </div>
